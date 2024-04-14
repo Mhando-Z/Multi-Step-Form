@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "product_name": "Fall Limited Edition Sneakers",
+      "product_brand": "SNEAKER COMPANY",
+      "product_description": " These low-profile sneakers are your perfect casual wear companion, Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.",
+      "specs": {
+        "size": 5.6
+      },
+      "image_path": "./iphone 12.png",
+      "category": "smartphone",
+      "condition": "brand new",
+      "price": "$125.00 ",
+      "prices": 125.0,
+      "rate": "50%",
+      "lastprice": "250.00 ",
+      "color": "white",
+      "warrant": "6 months",
+      "count": 0
+    }
+  ]
+}
