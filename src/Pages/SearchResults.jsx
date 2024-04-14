@@ -37,7 +37,7 @@ function SearchResults() {
           Search Results for...."{id}"
         </h1>
       </div>
-      <div className="mt-10 container mx-auto grid gap-10 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
+      <div className="mt-10  container mx-auto grid gap-5 xl:gap-8 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
         {Results.slice(0, Visisble).map((info, index) => {
           return (
             <div>

@@ -58,7 +58,7 @@ function HomePage() {
             type="search"
             onChange={(e) => handleInput(e)}
             onKeyDown={(e) => handleSearch(e)}
-            className="py-2 w-full  dark:ring-slate-800 dark:bg-slate-700 ring-2 ring-pink-600 px-28 outline-none relative placeholder:text-center"
+            className="py-2 w-full  dark:ring-slate-800 dark:bg-slate-700 ring-2 ring-gray-200 px-16 outline-none relative placeholder:text-center"
             placeholder="Search for a country"
           />
           <div className="absolute left-3 top-2">
@@ -66,7 +66,7 @@ function HomePage() {
           </div>
           <Link
             to={`Results/${Query}`}
-            className="text-xl md:py-2 py-1 dark:bg-slate-700 dark:ring-slate-800 text-center px-8 ring-2 ring-pink-600 shadow-md"
+            className="text-xl md:py-2 py-1 dark:bg-slate-700 dark:ring-slate-800 text-center px-8 ring-2 ring-gray-300 shadow-md"
           >
             Search
           </Link>
@@ -87,7 +87,7 @@ function HomePage() {
         </select>
       </div>
       {showContent1 && (
-        <div className="mt-10 lg:h-screen container mx-auto grid gap-10 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
+        <div className="mt-10 container mx-auto grid gap-5 xl:gap-8 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
           {data.slice(0, Visisble).map((info) => {
             return (
               <div>
@@ -128,7 +128,7 @@ function HomePage() {
         </div>
       )}
       {showContent2 && (
-        <div className="mt-10 lg:h-screen container mx-auto grid gap-10 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
+        <div className="mt-10 lg:h-screen container mx-auto grid gap-5 xl:gap-8 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
           {Continents[Continent].slice(0, Visisble).map((info) => {
             return (
               <div>
