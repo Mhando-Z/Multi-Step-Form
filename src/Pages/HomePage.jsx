@@ -87,7 +87,7 @@ function HomePage() {
         </select>
       </div>
       {showContent1 && (
-        <div className="mt-10 container mx-auto grid gap-10 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
+        <div className="mt-10 lg:h-screen container mx-auto grid gap-10 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
           {data.slice(0, Visisble).map((info) => {
             return (
               <div>
@@ -128,7 +128,7 @@ function HomePage() {
         </div>
       )}
       {showContent2 && (
-        <div className="mt-10 container mx-auto grid gap-10 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
+        <div className="mt-10 lg:h-screen container mx-auto grid gap-10 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center">
           {Continents[Continent].slice(0, Visisble).map((info) => {
             return (
               <div>
