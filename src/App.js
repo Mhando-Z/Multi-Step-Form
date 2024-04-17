@@ -1,29 +1,54 @@
+import PageNotFound from "./Components/PageNotFound";
+import {
+  HomePage,
+  PersonalInfo,
+  Summary,
+  ThankYou,
+  YourPlans,
+} from "./Pages/Collect";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import HomePage from "./Pages/HomePage";
-import DetailsPage from "./Pages/DetailsPage";
-import SearchResults from "./Pages/SearchResults";
+import { ActivePageProvider } from "./Context/ActivePage";
+import AddOns from "./Pages/AddOns";
 
-const route = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
-  },
-  {
-    path: "/Details/:id",
-    element: <DetailsPage />,
-  },
-  {
-    path: "/Results/:id",
-    element: <SearchResults />,
+    errorElement: <PageNotFound />,
+    children: [
+      { index: true, element: <PersonalInfo /> },
+      {
+        path: "Personalinfo",
+        element: <PersonalInfo />,
+      },
+      {
+        path: "Summary",
+        element: <Summary />,
+      },
+      {
+        path: "Yourplans",
+        element: <YourPlans />,
+      },
+      {
+        path: "AddOns",
+        element: <AddOns />,
+      },
+      {
+        path: "ThankYou",
+        element: <ThankYou />,
+      },
+    ],
   },
 ]);
 
 function App() {
   return (
-    <div className="dark:bg-gray-800 dark:text-slate-50">
-      <Navbar />
-      <RouterProvider router={route} />
+    <div className="">
+      <ActivePageProvider>
+        <div>
+          <RouterProvider router={router} />
+        </div>
+      </ActivePageProvider>
     </div>
   );
 }
