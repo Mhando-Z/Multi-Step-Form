@@ -13,7 +13,7 @@ function HomaPage() {
   const { steps } = useContext(ActivePageContext);
 
   return (
-    <div className="flex flex-col md:items-center bg-gray-300 justify-center md:h-screen">
+    <div className="flex flex-col md:items-center bg-gray-300 justify-center md:min-h-screen">
       <img
         src={smpcture}
         alt="picha"
@@ -117,10 +117,12 @@ function HomaPage() {
             ))}
           </Stepper>
         </div>
-        <div className="md:px-10 hidden md:flex">
+        {/* large displays */}
+        <div className="md:px-10 hidden md:flex w-[650px]">
           <Outlet />
         </div>
       </div>
+      {/* Small devices */}
       <div className="absolute top-44 md:hidden right-0 left-0 bottom-0  items-center justify-center">
         <div className="bg-gray-100 rounded-xl mx-auto container items-center">
           <Outlet />
